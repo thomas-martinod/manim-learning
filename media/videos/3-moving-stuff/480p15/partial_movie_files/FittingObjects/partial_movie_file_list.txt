@@ -1,0 +1,5 @@
+# This file is used internally by FFMPEG.
+file 'file:/home/th/Documents/GitHub/manim-learning/media/videos/3-moving-stuff/480p15/partial_movie_files/FittingObjects/1185818338_2905755946_223132457.mp4'
+file 'file:/home/th/Documents/GitHub/manim-learning/media/videos/3-moving-stuff/480p15/partial_movie_files/FittingObjects/624642324_1833573334_1849994013.mp4'
+file 'file:/home/th/Documents/GitHub/manim-learning/media/videos/3-moving-stuff/480p15/partial_movie_files/FittingObjects/624642324_3736283184_3147921501.mp4'
+file 'file:/home/th/Documents/GitHub/manim-learning/media/videos/3-moving-stuff/480p15/partial_movie_files/FittingObjects/624642324_113805549_3147921501.mp4'
