@@ -39,3 +39,28 @@ class Matrix(LinearTransformationScene):
         self.apply_matrix(matrix)
 
         self.wait()
+
+
+class AddingVectors(Scene):
+    def construct(self):
+        plane = NumberPlane(x_range=[-5,5,1], y_range=[-4,4,1], x_length=10, y_length=7)
+        plane.add_coordinates()
+        plane.shift(RIGHT * 2)
+
+        Vec1 = Line(start=plane.coords_to_point(0,0), end=plane.coords_to_point(3,2), stroke_color=YELLOW).add_tip()
+        Vec1_label = MathTex(r"\\vec{v}").next_to(Vec1, RIGHT, buff=0.1).set_color(YELLOW)
+
+        Vec2 = Line(start=plane.coords_to_point(0,0), end=plane.coords_to_point(-2,1), stroke_color=RED).add_tip()
+        Vec2_label = MathTex(r"\\vec{w}").next_to(Vec2, LEFT, buff=0.1).set_color(RED)
+
+        Vec3 = Line(start=plane.coords_to_point(3,2), end=plane.coords_to_point(-2,1), stroke_color=RED).add_tip()
+
+        Vec4 = Line(start=plane.coords_to_point(0,0), end=plane.coords_to_point(1,3), stroke_color=GREEN).add_tip()
+        Vec4_label = MathTex(r"\\vec{v} + \\vec{w}").next_to(Vec4, LEFT, buff=0.1).set_color(YELLOW)
+
+        stuff = VGroup(plane, Vec1, Vec1_label, Vec2, Vec2_label, Vec3, Vec4, Vec4_label)
+        box = RoundedRectangle(height = 1.5, width = 1.5, corner_radius=0.1, stroke_color=PINK).toedge(DL)
+
+        self.play(DrawBorderThenFill(plane), run_time=2)
+        self.wait()
+        self.play(GrowFromPoint(Vec1, point=Vec1.get_start()), Write(Vec1_label), run_time = 2)
